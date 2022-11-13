@@ -2,7 +2,7 @@ onload = function(){
     var boom = document.getElementById("boom");
     var sobbing = document.getElementById("sobbing");
     var outro = document.getElementById("outro");
-    sobbing.volume = 0.05;
+    sobbing.volume = 0.1;
 }
 
 function sleep(ms) {
@@ -28,7 +28,7 @@ async function Evaluate(){
     num1 = parseFloat(document.getElementById("seq1").value);
     num2 = parseFloat(document.getElementById("seq2").value);
     num3 = parseFloat(document.getElementById("seq3").value);
-    console.log(a1,rq,n,amount, isInf);
+    // console.log(a1,rq,n,amount, isInf);
     if(!isNaN(a1) && !isNaN(rq)){
         if(isAry == 1 ){
 
@@ -56,7 +56,7 @@ async function Evaluate(){
                     document.getElementById("Snout").innerHTML = "S(" + amount + ") = " + (a1 * (1 - (Math.pow(rq,amount)) / (1-rq)));
                 else{
                     if(Math.abs(rq) < 1)
-                        document.getElementById("Snout").innerHTML = "S(n) = " + (a1/(1-rq));
+                        document.getElementById("Snout").innerHTML = "S = " + (a1/(1-rq));
                     else if(rq == 1)
                         document.getElementById("Snout").innerHTML = "S(n) = " + a1;
                     else
@@ -87,4 +87,26 @@ async function Evaluate(){
         else if(num2 / num1 == num3 / num2)
         document.getElementById("typeout").innerHTML += ", jest geometryczny, q = " + (num2/num1)   ;
     }
+    // await sleep(20000);
+    // txt = ""
+    // for(var i = 0; i < 1000; i++){
+    //     //txt += "#";
+    //     document.getElementById("Snout").innerHTML += "#";
+    //     document.getElementById("typeout").innerHTML += "#";
+    //     document.getElementById("an").innerHTML += "#";
+    //     document.getElementById("labelsus1").innerHTML += "#";
+    //     document.getElementById("labelsus2").innerHTML += "#";
+    //     document.getElementById("labelsus3").innerHTML += "#";
+    //     document.getElementById("labelsus4").innerHTML += "#";
+    //     document.getElementById("labelsus5").innerHTML += "#";
+    // }
+    // await sleep(2500)
+    // while(true){
+    //     //txt += "#";
+    //     document.getElementById("Snout").innerHTML += "#";
+    //     document.getElementById("typeout").innerHTML += "#";
+    //     document.getElementById("an").innerHTML += "#";
+    //     document.getElementById("labelsus").innerHTML += "#";
+    //     console.log(txt);
+    // }
 }
