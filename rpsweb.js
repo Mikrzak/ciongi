@@ -35,11 +35,11 @@ function Evaluate(){
                 if(isInf == 0)
                     document.getElementById("Snout").innerHTML = "S(" + amount + ") = " + (((2 * a1 + (amount-1) * rq)/2) * amount);
                 else{
-                    if(rq < 1)
+                    if(rq < 0)
                         document.getElementById("Snout").innerHTML = "S(n) = - nieskończoność";
-                    else if(rq > 1)
+                    else if(rq > 0)
                         document.getElementById("Snout").innerHTML = "S(n) = + nieskończoność";
-                    else if(rq == 1)
+                    else if(rq == 0)
                         document.getElementById("Snout").innerHTML = "S(n) = " + a1;
                 }
             }
