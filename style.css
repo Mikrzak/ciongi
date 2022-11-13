@@ -3,6 +3,7 @@ body {
     color: magenta;
     background-image: url('catboom.jpg');
     font-family: "Snap ITC";
+    text-shadow: 1px 1px #ff0000;
 }
 
 input[type=number]{
@@ -10,12 +11,13 @@ input[type=number]{
     border-color: yellowgreen;
     border-radius: 100px;
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    font-family: "Snap ITC";
 }
-
 
 #seq1,#seq2,#seq3{
     width: 15%;
     background: linear-gradient(45deg, rgb(21, 255, 0),  rgb(127, 88, 5));
+    font-family: "Snap ITC";
 }
 
 @keyframes emojiAnim {
@@ -29,6 +31,28 @@ input[type=number]{
 @keyframes catAnim {
     0%   {transform:rotate(0deg);}
     100% {transform:rotate(360deg);}
+}
+
+@keyframes titleAnim {
+    0%   {left:0px; top:0px;transform:rotate(0deg);}
+    25%  {left:0px; top:200px;}
+    50%  {left:400px; top:200px;}
+    75%  {left:400px; top:0px;}
+    100% {left:0px; top:0px;transform:rotate(90deg);}
+}
+
+#titleText{
+    text-shadow: 0 0 3px #6f00ff, 0 0 5px #eaff00;
+    color: yellow;
+    opacity: 0.75;
+    width: 50%;
+    position: absolute;
+    left: 400px;
+    bottom: 150px;
+    animation-name: titleAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
 }
 
 #emoji{
@@ -46,7 +70,7 @@ input[type=number]{
     width: 20%;
     position: absolute;
     left: 400px;
-    bottom: 100px;
+    bottom: 50px;
     animation-name: catAnim;
     animation-iteration-count: infinite;
     animation-duration: 1s;
@@ -55,13 +79,14 @@ input[type=number]{
 
 button{
     background-color: hotpink;
+    font-family: "Snap ITC";
 }
 
 select{
     background-color: red;
+    font-family: "Snap ITC";
 }
 
 #nums{
     display: flex;
-
 }
