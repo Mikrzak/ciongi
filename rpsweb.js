@@ -15,7 +15,7 @@ function playSobbing() {
 
 async function Evaluate(){
     outro.play();
-    await sleep(0);
+    await sleep(7500);
     boom.play(); 
     var a1, r, q, Sn, isAry, isInf, n, amount;
     a1 = parseFloat(document.getElementById("a1").value);
