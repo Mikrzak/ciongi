@@ -1,0 +1,66 @@
+body {
+    color: magenta;
+    background-image: url('catboom.jpg');
+    font-family: "Snap ITC";
+}
+
+input[type=number]{
+   
+    border-color: yellowgreen;
+    border-radius: 100px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+}
+
+
+#seq1,#seq2,#seq3{
+    width: 15%;
+    background: linear-gradient(45deg, rgb(21, 255, 0),  rgb(127, 88, 5));
+}
+
+@keyframes emojiAnim {
+    0%   {left:0px; top:0px;transform:rotate(0deg);}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;transform:rotate(360deg);}
+}
+
+@keyframes catAnim {
+    0%   {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+#emoji{
+    width: 25%;
+    position: absolute;
+    left: 400px;
+    bottom: 150px;
+    animation-name: emojiAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+#cat{
+    width: 20%;
+    position: absolute;
+    left: 400px;
+    bottom: 100px;
+    animation-name: catAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+button{
+    background-color: hotpink;
+}
+
+select{
+    background-color: red;
+}
+
+#nums{
+    display: flex;
+
+}

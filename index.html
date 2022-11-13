@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> KALKUILATROR CIAONGUW </title>
+    </head>
+
+    <body>
+        
+        <script src = "rpsweb.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <select name="isAry" id="isAry" onchange=playSobbing()>
+            <option value=1>Arytmetyczny</option>
+            <option value=0>Geometryczny</option>
+            <!-- <option value=-1>Nie wiem UwU</option> -->
+        </select>
+
+        <select name="isInf" id="isInf" onchange=playSobbing()>
+            <option value=0>Skończony</option>
+            <option value=1>Nieskończony</option>
+        </select>
+
+        <br>
+        <label> a(1): </label>
+        <input type="number" id="a1" value="" oninput=playSobbing()><br>
+        <label> r/q: </label>
+        <input type="number" id="rq" value="" oninput=playSobbing()><br>
+        <!-- <label> Sn: </label>
+        <input type="number" id="Sn" value=""><br> -->
+        <label> Który element wyznaczyć: </label>
+        <input type="number" id="n" value="" oninput=playSobbing()><br>
+        <label> Ile początkowych elementów zsumować: </label>
+        <input type="number" id="amount" value="" oninput=playSobbing()><br>
+        <label> 3 wyrazy ciągu: </label>
+        <div id="nums">
+            <input type="number" id="seq1" value="" oninput=playSobbing()><br>
+            <input type="number" id="seq2" value="" oninput=playSobbing()><br>
+            <input type="number" id="seq3" value="" oninput=playSobbing()><br>
+        </div>
+        <button id ="evaluate" onclick=Evaluate();playBoom()> Oblicz </button>
+
+        <p id="an"></p>
+        <p id="Snout"></p>
+        <p id="typeout"></p>
+
+        <img src="emoji.jpg" id="emoji"></img>
+        <img src="cat.jpg" id="cat"></img>
+
+        <audio id="boom">
+            <source src="explosion-03.mp3" type="audio/ogg">
+            <source src="explosion-03.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="sobbing">
+            <source src="mixkit-creature-sobbing-in-fear-464.wav" type="audio/ogg">
+            <source src="mixkit-creature-sobbing-in-fear-464.wav" type="audio/mpeg">
+        </audio>
+
+    </body>
+</html>
