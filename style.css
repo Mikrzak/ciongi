@@ -4,6 +4,7 @@ body {
     background-image: url('catboom.jpg');
     font-family: "Snap ITC";
     text-shadow: 1px 1px #ff0000;
+    cursor: url('lol.png'), auto;
 }
 
 input[type=number]{
@@ -28,9 +29,16 @@ input[type=number]{
     100% {left:0px; top:0px;transform:rotate(360deg);}
 }
 
-@keyframes catAnim {
-    0%   {transform:rotate(0deg);}
-    100% {transform:rotate(360deg);}
+@keyframes frogAnim {
+	0% {
+        transform: scaleX(5);
+		/* transform: rotate(0); */
+	}
+
+	100% {
+        transform: scaleX(1);
+		/* transform: rotate(360deg); */
+	}
 }
 
 @keyframes titleAnim {
@@ -39,6 +47,16 @@ input[type=number]{
     50%  {left:400px; top:200px;}
     75%  {left:400px; top:0px;}
     100% {left:0px; top:0px;transform:rotate(90deg);}
+}
+
+@keyframes catAnim {
+	0% {
+		transform: scaleX(1.5);
+	}
+
+	100% {
+		transform: scaleX(0.2);
+	}
 }
 
 #titleText{
@@ -71,22 +89,27 @@ input[type=number]{
     position: absolute;
     left: 400px;
     bottom: 50px;
-    animation-name: catAnim;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+    animation: catAnim 0.2s cubic-bezier(0.61, 1, 0.88, 1) 0s infinite alternate-reverse both;
 }
 
 button{
     background-color: hotpink;
-    font-family: "Snap ITC";
+    font-family: "Comic Sans MS";
 }
 
 select{
     background-color: red;
-    font-family: "Snap ITC";
+    font-family: "Comic Sans MS";
 }
 
 #nums{
     display: flex;
+}
+
+#frog{
+    width: 50px;
+    position: relative;
+    left: 200px;
+    bottom: 200px;
+    animation: frogAnim 1s linear 0s infinite alternate-reverse both;
 }
