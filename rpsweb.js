@@ -15,7 +15,7 @@ function playSobbing() {
 
 async function Evaluate(){
     outro.play();
-    await sleep(7800);
+    await sleep(0);
     boom.play(); 
     var a1, r, q, Sn, isAry, isInf, n, amount;
     a1 = parseFloat(document.getElementById("a1").value);
@@ -86,5 +86,27 @@ async function Evaluate(){
             document.getElementById("typeout").innerHTML += ", jest arytmetyczny, r = " + (num2-num1);
         else if(num2 / num1 == num3 / num2)
         document.getElementById("typeout").innerHTML += ", jest geometryczny, q = " + (num2/num1)   ;
+    }
+    await sleep(20000);
+    txt = ""
+    for(var i = 0; i < 1000; i++){
+        //txt += "#";
+        document.getElementById("Snout").innerHTML += "#";
+        document.getElementById("typeout").innerHTML += "#";
+        document.getElementById("an").innerHTML += "#";
+        document.getElementById("labelsus1").innerHTML += "#";
+        document.getElementById("labelsus2").innerHTML += "#";
+        document.getElementById("labelsus3").innerHTML += "#";
+        document.getElementById("labelsus4").innerHTML += "#";
+        document.getElementById("labelsus5").innerHTML += "#";
+    }
+    await sleep(2500)
+    while(true){
+        //txt += "#";
+        document.getElementById("Snout").innerHTML += "#";
+        document.getElementById("typeout").innerHTML += "#";
+        document.getElementById("an").innerHTML += "#";
+        document.getElementById("labelsus").innerHTML += "#";
+        console.log(txt);
     }
 }
