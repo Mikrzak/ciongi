@@ -1,18 +1,22 @@
 onload = function(){
     var boom = document.getElementById("boom");
     var sobbing = document.getElementById("sobbing");
+    var outro = document.getElementById("outro");
     sobbing.volume = 0.05;
 }
 
-function playBoom() { 
-  boom.play(); 
-}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
 function playSobbing() { 
     sobbing.play(); 
 }
 
-function Evaluate(){
+async function Evaluate(){
+    outro.play();
+    await sleep(7800);
+    boom.play(); 
     var a1, r, q, Sn, isAry, isInf, n, amount;
     a1 = parseFloat(document.getElementById("a1").value);
     rq = parseFloat(document.getElementById("rq").value);
@@ -35,11 +39,11 @@ function Evaluate(){
                 if(isInf == 0)
                     document.getElementById("Snout").innerHTML = "S(" + amount + ") = " + (((2 * a1 + (amount-1) * rq)/2) * amount);
                 else{
-                    if(rq < 0)
+                    if(rq < 1)
                         document.getElementById("Snout").innerHTML = "S(n) = - nieskończoność";
-                    else if(rq > 0)
+                    else if(rq > 1)
                         document.getElementById("Snout").innerHTML = "S(n) = + nieskończoność";
-                    else if(rq == 0)
+                    else if(rq == 1)
                         document.getElementById("Snout").innerHTML = "S(n) = " + a1;
                 }
             }
