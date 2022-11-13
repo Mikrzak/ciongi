@@ -8,6 +8,8 @@
         <script src = "rpsweb.js"></script>
         <link rel="stylesheet" href="style.css">
 
+        <p id="titleText"> KALKULATOR CIĄGÓW 2022!!!!</p>
+
         <select name="isAry" id="isAry" onchange=playSobbing()>
             <option value=1>Arytmetyczny</option>
             <option value=0>Geometryczny</option>
@@ -36,7 +38,7 @@
             <input type="number" id="seq2" value="" oninput=playSobbing()><br>
             <input type="number" id="seq3" value="" oninput=playSobbing()><br>
         </div>
-        <button id ="evaluate" onclick=Evaluate();playBoom()> Oblicz </button>
+        <button id ="evaluate" onclick=Evaluate()> Oblicz </button>
 
         <p id="an"></p>
         <p id="Snout"></p>
@@ -53,6 +55,11 @@
         <audio id="sobbing">
             <source src="mixkit-creature-sobbing-in-fear-464.wav" type="audio/ogg">
             <source src="mixkit-creature-sobbing-in-fear-464.wav" type="audio/mpeg">
+        </audio>
+
+        <audio id="outro">
+            <source src="outro.mp3" type="audio/ogg">
+            <source src="outro.mp3" type="audio/mpeg">
         </audio>
 
     </body>
