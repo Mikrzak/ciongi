@@ -1,31 +1,54 @@
+@font-face{
+    font-family: 'Junegust';
+    src: url("Junegust-vLay.ttf");
+}
+
+@font-face{
+    font-family: 'Comic Sans MS';
+    src: url("comic-sans-ms/comici.ttf");
+}
+
 body {
+    font-family: 'Junegust', 'Comic Sans MS';
     zoom: 4;
     color: magenta;
     background-image: url('catboom.jpg');
-    font-family: "Snap ITC";
     text-shadow: 1px 1px #ff0000;
     cursor: url('lol.png'), auto;
 }
 
+html::-webkit-scrollbar {
+    width: 20px;
+}
+html::-webkit-scrollbar-track {
+   background-image: linear-gradient(45deg, red, yellow, blue, red);
+   background-size: 10px 10px;
+ }
+html::-webkit-scrollbar-thumb {
+ background: transparent;
+ border-radius: 5px;
+ border: 2px solid black;
+ box-shadow: inset 1px 1px 5px black ;
+}
+
 input[type=number]{
-   
+    font-family: 'Comic Sans MS';
     border-color: yellowgreen;
     border-radius: 100px;
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
-    font-family: "Snap ITC";
 }
 
 #seq1,#seq2,#seq3{
+    font-family: 'Junegust';
     width: 15%;
     background: linear-gradient(45deg, rgb(21, 255, 0),  rgb(127, 88, 5));
-    font-family: "Snap ITC";
 }
 
 @keyframes emojiAnim {
     0%   {left:0px; top:0px;transform:rotate(0deg);}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
+    25%  {left:80%; top:0px;}
+    50%  {left:80%; top:80%;}
+    75%  {left:0px; top:80%;}
     100% {left:0px; top:0px;transform:rotate(360deg);}
 }
 
@@ -41,11 +64,21 @@ input[type=number]{
 	}
 }
 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @keyframes titleAnim {
     0%   {left:0px; top:0px;transform:rotate(0deg);}
-    25%  {left:0px; top:200px;}
-    50%  {left:400px; top:200px;}
-    75%  {left:400px; top:0px;}
+    25%  {left:0px; top:100%;}
+    50%  {left:100%; top:100%;}
+    75%  {left:100%; top:0px;}
     100% {left:0px; top:0px;transform:rotate(90deg);}
 }
 
@@ -60,13 +93,13 @@ input[type=number]{
 }
 
 #titleText{
+    font-family: 'Junegust';
+    box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);
     text-shadow: 0 0 3px #6f00ff, 0 0 5px #eaff00;
     color: yellow;
     opacity: 0.75;
     width: 50%;
     position: absolute;
-    left: 400px;
-    bottom: 150px;
     animation-name: titleAnim;
     animation-iteration-count: infinite;
     animation-duration: 4s;
@@ -76,40 +109,58 @@ input[type=number]{
 #emoji{
     width: 25%;
     position: absolute;
-    left: 400px;
-    bottom: 150px;
     animation-name: emojiAnim;
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-timing-function: linear;
+    box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);
 }
 
 #cat{
     width: 20%;
-    position: absolute;
-    left: 400px;
-    bottom: 50px;
+    position: relative;
+    left: 60%;
+    bottom: 50%;
     animation: catAnim 0.2s cubic-bezier(0.61, 1, 0.88, 1) 0s infinite alternate-reverse both;
+    box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);
+}
+
+#fan{
+    width: 15%;
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    animation: spin 0.5s linear 0s infinite normal forwards;
+    box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);
 }
 
 button{
+    font-family: 'Comic Sans MS';
     background-color: hotpink;
-    font-family: "Comic Sans MS";
+    font-family: url("comics.ttf");
 }
 
 select{
+    font-family: 'Comic Sans MS';
     background-color: red;
-    font-family: "Comic Sans MS";
+    font-family: url("comic.ttf");
 }
 
 #nums{
     display: flex;
 }
 
+#frogs{
+    overflow:hidden;
+    width:auto;
+    display:inline;
+}
+
 #frog{
-    width: 50px;
-    position: relative;
-    left: 200px;
-    bottom: 200px;
+    box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);
+    position:relative;
+    width: 5%;
+    left: 30%;
+    bottom: 120%;
     animation: frogAnim 1s linear 0s infinite alternate-reverse both;
 }
