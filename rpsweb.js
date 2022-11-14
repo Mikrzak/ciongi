@@ -1,3 +1,5 @@
+var csstext = "animation: catAnim 0.2s cubic-bezier(0.61, 1, 0.88, 1) 0s infinite alternate-reverse both;box-shadow: 10px 10px 10px 10px rgba(42, 42, 42, 0.696);"
+
 onload = function(){
     var boom = document.getElementById("boom");
     var sobbing = document.getElementById("sobbing");
@@ -14,9 +16,27 @@ function playSobbing() {
 }
 
 async function Evaluate(){
+    document.getElementById("isAry").setAttribute("style", csstext);
+    document.getElementById("isInf").setAttribute("style", csstext);
+    document.getElementById("a1").setAttribute("style", csstext);
+    document.getElementById("rq").setAttribute("style", csstext);
+    document.getElementById("seq1").setAttribute("style", csstext);
+    document.getElementById("seq2").setAttribute("style", csstext);
+    document.getElementById("seq3").setAttribute("style", csstext);
+    document.getElementById("amount").setAttribute("style", csstext);
+    document.getElementById("n").setAttribute("style", csstext);
+    document.getElementById("labelsus1").setAttribute("style", csstext);
+    document.getElementById("labelsus2").setAttribute("style", csstext);
+    document.getElementById("labelsus3").setAttribute("style", csstext);
+    document.getElementById("labelsus4").setAttribute("style", csstext);
+    document.getElementById("labelsus5").setAttribute("style", csstext);
+    outro.pause();
+    outro.currentTime = 0;
+    boom.pause();
+    boom.currentTime = 0;
     outro.play();
-    await sleep(7500);
-    boom.play(); 
+    await sleep(7700);
+    boom.play();
     var a1, r, q, Sn, isAry, isInf, n, amount;
     a1 = parseFloat(document.getElementById("a1").value);
     rq = parseFloat(document.getElementById("rq").value);
@@ -71,7 +91,7 @@ async function Evaluate(){
         console.log(num1,num2,num3);
         document.getElementById("typeout").innerHTML = "";
         if(num1 == num2 && num1 == num3)
-            document.getElementById("typeout").innerHTML += "Ciąg jest stały, arytmetyczny i geometryczny (r = q = 1)";
+            document.getElementById("typeout").innerHTML += "Ciąg jest stały, arytmetyczny i geometryczny (r = 0, q = 1)";
         else if(num1 > num2 && num2 > num3)
             document.getElementById("typeout").innerHTML += "Ciąg jest malejący";
         else if((num1 == num2 && num2 >= num3) || (num1 >= num2 && num2 == num3))
@@ -87,6 +107,20 @@ async function Evaluate(){
         else if(num2 / num1 == num3 / num2)
         document.getElementById("typeout").innerHTML += ", jest geometryczny, q = " + (num2/num1)   ;
     }
+    document.getElementById("isAry").setAttribute("style", "");
+    document.getElementById("isInf").setAttribute("style", "");
+    document.getElementById("a1").setAttribute("style", "");
+    document.getElementById("rq").setAttribute("style", "");
+    document.getElementById("seq1").setAttribute("style", "");
+    document.getElementById("seq2").setAttribute("style", "");
+    document.getElementById("seq3").setAttribute("style", "");
+    document.getElementById("amount").setAttribute("style", "");
+    document.getElementById("n").setAttribute("style", "");
+    document.getElementById("labelsus1").setAttribute("style", "");
+    document.getElementById("labelsus2").setAttribute("style", "");
+    document.getElementById("labelsus3").setAttribute("style", "");
+    document.getElementById("labelsus4").setAttribute("style", "");
+    document.getElementById("labelsus5").setAttribute("style", "");
     // await sleep(20000);
     // txt = ""
     // for(var i = 0; i < 1000; i++){
